@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --gradient: linear-gradient(
+          90deg, 
+          #6ea3f8, 
+          #6e8ef8, 
+          #6e75f8, 
+          #5451ee,
+          #3e3be0);
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    min-height: 100vh;
+    background-color: #706ef8;
+    font-family: "Bakbak One", display;
+    text-align: center;
+    background-image: var(--gradient);
+    background-size: 400%;
+    animation: bg-gradient 5s infinite alternate;
+}
+
+.title {
+    display: inline-block;
+    color: whitesmoke;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    span {
+      display: inline-block; 
+      animation: grBuchstabe 1s forwards; 
+      animation-iteration-count: 1;
+    }
+}
+  
+
+.wrapper {
+    height: 25rem;
+    width: 25rem;
+    background: rgb(29, 28, 28);
+    border-radius: 0.625rem;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 1.5625rem;
+  
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      padding: 0;
+      gap: 1rem;
+      height: 100%;
+      width: 100%;
+      list-style: none;
+  
+      .card {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: rgb(32, 32, 32);
+        border-radius: 0.4375rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+        perspective: 50rem;
+        transform-style: preserve-3d;
+        transition: transform 0.6s ease-in-out;
+        &.flip {
+          transform: rotateY(180deg);
+        }
+        &.flip .back-view {
+          transform: rotateY(-180deg);
+        }
+  
+        &.flip .front-view {
+            transform: rotateY(180deg);
+        }
+  
+        .front-view {
+          transform: rotateY(0deg);
+          .icons {
+            i {
+              color: rgb(148, 164, 194);
+              font-weight: bold;
+              font-size: 2rem;
+            }
+          }
+        }
+  
+        .back-view {
+          transform: rotateY(180deg);
+          img {
+            max-width: 2.8125rem;
+            height: auto;
+            display: block; 
+           }
+        }
+  
+        .front-view,
+        .back-view {
+          position: absolute;
+          backface-visibility: hidden;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  
+    .cards,
+    .card,
+    .view {
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .view {
+      backface-visibility: hidden;
+      pointer-events: none;
+      user-select: none;
+    }
+}
+  
+@keyframes bg-gradient {
+    0% {background-position: left}
+    100% {background-position: right}
+}
+  
+  
+@keyframes grBuchstabe {
+    0%, 100% {
+      transform: scale(1); 
+    }
+    50% {
+      transform: scale(1.5); 
+    }
+}
+
+  
+.title span:nth-child(1) { animation-delay: 0s; }
+.title span:nth-child(2) { animation-delay: 0.05s; } 
+.title span:nth-child(3) { animation-delay: 0.1s; } 
+.title span:nth-child(4) { animation-delay: 0.15s; } 
+.title span:nth-child(5) { animation-delay: 0.2s; } 
+.title span:nth-child(6) { animation-delay: 0.25s; } 
+.title span:nth-child(7) { animation-delay: 0.3s; }
+.title span:nth-child(8) { animation-delay: 0.35s; } 
+.title span:nth-child(9) { animation-delay: 0.4s; } 
+.title span:nth-child(10) { animation-delay: 0.45s; } 
+.title span:nth-child(11) { animation-delay: 0.5s; } 
+.title span:nth-child(12) { animation-delay: 0.55s; }
+.title span:nth-child(13) { animation-delay: 0.6s; } 
+.title span:nth-child(14) { animation-delay: 0.65s; } 
+.title span:nth-child(15) { animation-delay: 0.7s; } 
+.title span:nth-child(16) { animation-delay: 0.75s; } 
+.title span:nth-child(17) { animation-delay: 0.8s; }
