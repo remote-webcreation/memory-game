@@ -2,13 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --gradient: linear-gradient(
-          90deg, 
-          #6ea3f8, 
-          #6e8ef8, 
-          #6e75f8, 
-          #5451ee,
-          #3e3be0);
+    --gradient: linear-gradient(90deg, #B0E0E6, #A0CED9, #87CEEB, #40A8C2, #00BFFF, #0093AF, #007CAF, #665287, #4682B4, #C6A2D1, #DDA0DD, #A669A6, #800080);
 }
 
 
@@ -19,17 +13,17 @@ body {
     align-items: center;
     gap: 2rem;
     min-height: 100vh;
-    background-color: #706ef8;
+    background-color:#B0E0E6;
     font-family: "Bakbak One", display;
     text-align: center;
     background-image: var(--gradient);
-    background-size: 400%;
-    animation: bg-gradient 5s infinite alternate;
+    background-size: 500%;
+    animation: bg-gradient 30s infinite alternate;
 }
 
 .title {
     display: inline-block;
-    color: whitesmoke;
+    color: rgb(82, 82, 82);
     margin-top: 2rem;
     font-size: 2.5rem;
     span {

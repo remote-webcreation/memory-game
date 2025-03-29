@@ -25,7 +25,7 @@ function flipCard(e) {
     disableCards = true;
 
     let cardOneImg = cardOne.querySelector("img").src;
-    cardTwoImg = cardTwo.querySelector("img").src;
+    let cardTwoImg = cardTwo.querySelector("img").src;
 
     if(cardOneImg === cardTwoImg) {
 
