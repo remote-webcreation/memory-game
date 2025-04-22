@@ -61,7 +61,7 @@ body {
         display: flex;
         width: 100%;
         height: 100%;
-        background: rgb(32, 32, 32);
+        background: rgb(41, 41, 41);
         border-radius: 0.4375rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
         perspective: 50rem;
@@ -127,12 +127,15 @@ body {
     }
 }
   
+
+/* animation keyframes */
+
 @keyframes bg-gradient {
     0% {background-position: left}
     100% {background-position: right}
 }
   
-  
+/* title */
 @keyframes grBuchstabe {
     0% {
       transform: scale(1);
@@ -146,6 +149,20 @@ body {
       transform: scale(1);
       color: whitesmoke;
     }
+}
+
+/* card border */
+
+@keyframes animatedBorder {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 
